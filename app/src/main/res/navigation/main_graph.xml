@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.appchallenge.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" >
+        <action
+            android:id="@+id/action_termsFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.appchallenge.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_termsFragment"
+            app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.example.appchallenge.ActivitiesFragment"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" >
+        <action
+            android:id="@+id/action_activitiesFragment_to_suggestionCategoryFragment"
+            app:destination="@id/suggestionCategoryFragment" />
+        <action
+            android:id="@+id/action_activitiesFragment_to_suggestionRandomFragment"
+            app:destination="@id/suggestionRandomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/suggestionCategoryFragment"
+        android:name="com.example.appchallenge.SuggestionCategoryFragment"
+        android:label="SuggestionCategoryFragment"
+        tools:layout="@layout/fragment_suggestion_category"/>
+    <fragment
+        android:id="@+id/suggestionRandomFragment"
+        android:name="com.example.appchallenge.SuggestionRandomFragment"
+        android:label="SuggestionRandomFragment"
+        tools:layout="@layout/fragment_suggestion_random"/>
+</navigation>
