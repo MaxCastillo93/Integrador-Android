@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.appchallenge.APIService.Companion.getRetrofit
 import com.example.appchallenge.databinding.FragmentHomeBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -19,6 +23,9 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,6 +34,13 @@ class HomeFragment : Fragment() {
         binding.tvTerms.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment2_to_termsFragment)
         }
+
+        binding.btnStart.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment2_to_activitiesFragment)
+        }
+
+
+
     }
 
 }
