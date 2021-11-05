@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.whenCreated
 import androidx.navigation.fragment.findNavController
 import com.example.appchallenge.databinding.FragmentSuggestionCategoryBinding
 import kotlinx.coroutines.CoroutineScope
@@ -30,35 +31,50 @@ class SuggestionCategoryFragment : Fragment() {
         binding.btnToolbarBackFragmentSuggestions.setOnClickListener {
             findNavController().navigate(R.id.action_suggestionCategoryFragment_to_activitiesFragment)
         }
-        /*    super.onViewCreated(view, savedInstanceState)
 
+        setUpCategory()
+
+
+    }
+
+    private fun setUpCategory() {
         val name = "Corrutina Retrofit"
+        val type = "education" //datos para prueba
+        val numberPart = 5      // datos para prueba
 
-        CoroutineScope(Dispatchers.IO).launch{
+        CoroutineScope(Dispatchers.IO).launch {
 
             Log.i(name, "Lanzando llamada")
 
+
             val llamada = APIService.getRetrofit()
                 .create(APIService::class.java)
-                .getActivityEducation()
+                .getActivity("activity?type=$type&$numberPart")
 
             Log.i(name, "Se ejecuta llamada")
-
 
             val respuesta: Activities? = llamada.body()
 
             activity?.runOnUiThread {
                 Log.i(name, "Run Thread")
 
-                if(llamada.isSuccessful){
+                if (llamada.isSuccessful) {
 
+                   val price = respuesta?.price?.toDouble()
+                    binding.tvTextcostFragmentsSuggestions.text = when (price!!){
+                        0.0 ->  "Free"
+                        in 0.0..0.3 ->  "Low"
+                        in 0.3..0.6 -> "Medium"
+                        else -> "High"
+                    }
+
+                    binding.tvTitleActivityFragmentSuggestions.text = respuesta?.actividad
+                    binding.tvNumParticipansFragmentSuggestions.text = respuesta?.participants.toString()
+
+                    Log.i(name, "Actualizando textView")
                 }
             }
-
-
-        }*/
-
-
+        }
     }
 
 }

@@ -27,6 +27,10 @@ class ActivitiesFragment : Fragment() {
         binding.ibRandomactivities.setOnClickListener {
             findNavController().navigate(R.id.action_activitiesFragment_to_suggestionRandomFragment)
         }
+
+        binding.tvEducation.setOnClickListener {
+            findNavController().navigate(R.id.action_activitiesFragment_to_suggestionCategoryFragment)
+        }
     }
 
 }
