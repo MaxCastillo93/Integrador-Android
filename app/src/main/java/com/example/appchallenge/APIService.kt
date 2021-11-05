@@ -8,8 +8,8 @@ import retrofit2.http.Url
 
 interface APIService {
 
-    @GET("activity?type=education")
-    suspend fun getActivityEducation (): Response<Activities>
+    @GET
+    suspend fun getActivity(@Url url: String): Response<Activities>
 
     companion object{
         fun getRetrofit(): Retrofit{
