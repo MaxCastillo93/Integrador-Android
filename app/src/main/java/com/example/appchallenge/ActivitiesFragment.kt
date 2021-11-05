@@ -24,8 +24,8 @@ class ActivitiesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvEducation.setOnClickListener {
-            findNavController().navigate(R.id.action_activitiesFragment_to_suggestionCategoryFragment)
+        binding.ibRandomactivities.setOnClickListener {
+            findNavController().navigate(R.id.action_activitiesFragment_to_suggestionRandomFragment)
         }
     }
 

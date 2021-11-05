@@ -1,11 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B3E5FC"
     tools:context=".TermsFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_fragmentRandom"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#0188d1"
+        android:gravity="center"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="-3dp">
 
+        <ImageButton
+            android:id="@+id/ibtoolbar_back_fragmentRandom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/icon_back_fragment_sugerencias" />
+
+        <TextView
+            android:id="@+id/tvtoolbar_fragmentRandom"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Random"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_title1_fragmentRandom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:hint="Actividad recomendada Random"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_fragmentRandom" />
+
+    <ImageView
+        android:id="@+id/iv_iconPeople_fragmentRandom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/iconperson_fragment_sugerence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title1_fragmentRandom" />
+
+    <TextView
+        android:id="@+id/tv_title2_fragmentsRandom"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="70dp"
+        android:text="Participants"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_iconPeople_fragmentRandom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title1_fragmentRandom" />
+
+    <TextView
+        android:id="@+id/tv_numParticipans_fragmentRandom"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="39dp"
+        android:hint="2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title1_fragmentRandom" />
+
+    <ImageView
+        android:id="@+id/iv_cost_fragmentRandom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_costfragment_recomends"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_iconPeople_fragmentRandom" />
+
+    <TextView
+        android:id="@+id/tv_title3_fragmentRandom"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="52dp"
+        android:text="Price"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_cost_fragmentRandom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title2_fragmentsRandom" />
+
+    <TextView
+        android:id="@+id/tv_textcost_fragmentsRandom"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="39dp"
+        android:hint="Precio"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numParticipans_fragmentRandom" />
+
+    <ImageView
+        android:id="@+id/iv_list_fragmentRandom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_listicon_random"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cost_fragmentRandom" />
+
+    <TextView
+        android:id="@+id/tv_title4_fragmentRandom"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
+        android:text="Relaxation"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title3_fragmentRandom" />
+
+    <Button
+        android:id="@+id/btn_again_fragmentRandom"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="99dp"
+        android:background="#0188d1"
+        android:text="Try Again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title4_fragmentRandom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

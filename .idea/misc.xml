@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2388888888888889" />
-        <entry key="app/src/main/res/layout/fragment_activities.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/drawable/icon_back_fragment_sugerencias.xml" value="0.2640625" />
+        <entry key="app/src/main/res/layout/fragment_activities.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1675925925925926" />
-        <entry key="app/src/main/res/layout/fragment_suggestion_category.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_suggestion_category.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_suggestion_random.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_terms.xml" value="0.1675925925925926" />
       </map>
     </option>

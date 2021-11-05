@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.appchallenge.databinding.FragmentSuggestionCategoryBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,11 +26,15 @@ class SuggestionCategoryFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnToolbarBackFragmentSuggestions.setOnClickListener {
+            findNavController().navigate(R.id.action_suggestionCategoryFragment_to_activitiesFragment)
+        }
+        /*    super.onViewCreated(view, savedInstanceState)
 
         val name = "Corrutina Retrofit"
 
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.IO).launch{
 
             Log.i(name, "Lanzando llamada")
 
@@ -47,13 +52,11 @@ class SuggestionCategoryFragment : Fragment() {
 
                 if(llamada.isSuccessful){
 
-                    binding.tvParticipants.text = respuesta?.participants.toString()
-                    Log.i(name, "Actualizando textView")
                 }
             }
 
 
-        }
+        }*/
 
 
     }

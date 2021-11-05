@@ -7,6 +7,17 @@
     android:background="#B3E5FC"
     tools:context=".TermsFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0188d1"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-3dp">
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tvEducation"
@@ -17,4 +28,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/ib_randomactivities"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_toolbar_random"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/toolbar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Activities"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ib_randomactivities"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
